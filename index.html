@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>  
+  <body>
+    <details>
+      <summary>help</summary>
+      <details>
+        <summary>Basics</summary>
+        Write pairs of numbers in the textarea. Each pair forms an point. Odd numbers represent 'x's and even numbers represent 'y's. All points are connected in order. The last point connects to the first one.
+      </details>
+      <details>
+        <summary>Stroke?</summary>
+        Use the stroke checkbox to determine if the path should be filled in or drawn with a stroke.
+      </details>
+      <details>
+        <summary>Style</summary>
+        Each path can have a style. Use the color input to select a color for each path.
+      </details>
+      <details>
+        <summary>Paths</summary>
+        The 'clone' button adds a second path. Paths aren't connected. Additional paths can be removed using the 'remove' button.
+      </details>
+    </details>
+    <canvas id="rendered-paths" width="800" height="400"></canvas>
+    <form>
+      <table>
+        <thead>
+          <tr>
+            <th>style</th>
+            <th>stroke?</th>
+            <th colspan="2">points</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+                <input type="checkbox" name="stroke" />
+            </td>
+            <td>
+                <input type="color" name="color" value="#800080" />
+            </td>
+            <td>
+                <textarea name="points">503 149
+515 217
+432 287
+311 221
+347 89
+372 135
+458 134
+493 94
+503 149</textarea>
+            </td>
+            <td>
+              <button name="clone">
+                clone
+              </button>
+            </td>
+            <td>
+              <button name="remove">
+                remove
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
+</html>
